@@ -1,0 +1,15 @@
+@import '../../../../assets/styles/global.scss';
+
+:host {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+img {
+    width: 40px;
+}
+
+span {
+    color: $black-color;
+}

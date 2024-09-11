@@ -1,9 +1,11 @@
+@import '../../../../assets/styles/global.scss';
+
 input {
     width: 395px;
     height: 30px;
-    background: #efefef;
-    font-size: 15px;
-    color: #333333;
+    background: $grey-color;
+    font-size: 16px;
+    color: $black-color;
     outline: none;
     border: none;
     padding: 0 15px;

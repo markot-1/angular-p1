@@ -1,0 +1,10 @@
+@import '../../../../assets/styles/global.scss';
+
+input {
+    border: 1px solid transparent;
+    padding: 5px;
+    width: 200px;
+    text-overflow: ellipsis;
+    color: $black-color;
+    outline: none;
+}

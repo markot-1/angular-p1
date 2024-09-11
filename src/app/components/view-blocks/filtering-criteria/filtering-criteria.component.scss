@@ -1,0 +1,9 @@
+@import '../../../../assets/styles/global.scss';
+
+.wrapper {
+    @extend %wrapper;
+
+    span {
+        color: $black-color;
+    }
+}
