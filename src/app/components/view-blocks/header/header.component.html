@@ -2,6 +2,10 @@
     <div class="logo"></div>
     <app-search-input></app-search-input>
     <button>Search</button>
+    <div class="settings-button" (click)="toggleSettings()">
+        <img src="../../../../assets/img/button-settings.png">
+    </div>
 </div>
 <app-login-information></app-login-information>
+<app-filtering-criteria [isVisible]="toggleFilters"></app-filtering-criteria>
 
