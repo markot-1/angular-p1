@@ -1,20 +1,20 @@
 <div class="video-card">
-    <div class="video-preview"></div>
+    <div class="video-preview" style="background-image: url('{{videoData.snippet.thumbnails.standard.url}}')"></div>
     <div class="video-stats">
         <div class="stats-wrapper">
             <div class="viewCount"></div>
-            <span>view</span>
+            <span>{{videoData.statistics.viewCount}}</span>
         </div>
         <div>
             <div class="likeCount"></div>
-            <span>like</span>
+            <span>{{videoData.statistics.likeCount}}</span>
         </div>
         <div>
             <div class="commentCount"></div>
-            <span>comm</span>
+            <span>{{videoData.statistics.commentCount}}</span>
         </div>
     </div>
-    <h3 class="header">Здесь будет заголовок</h3>
+    <h3 class="header">{{videoData.snippet.title}}</h3>
     <button class="information-button">more</button>
     <div class="indicator"></div>
 </div>

@@ -1,1 +1,5 @@
-<app-video-card></app-video-card>
+<ng-container *ngIf="data.items">
+    <ng-container *ngFor="let videoCard of data.items">
+        <app-video-card [videoData]="videoCard"></app-video-card>
+    </ng-container>
+</ng-container>
