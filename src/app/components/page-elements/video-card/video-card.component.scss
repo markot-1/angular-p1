@@ -50,10 +50,10 @@
     .indicator {
         height: 5px;
         width: 100%;
-        background: $light-blue-color;
         position: absolute;
         bottom: 0;
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;
+        background: $black-color;
     }
 }
