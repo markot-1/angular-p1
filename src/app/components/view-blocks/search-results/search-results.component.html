@@ -1,5 +1,11 @@
-<ng-container *ngIf="data.items">
-    <ng-container *ngFor="let videoCard of data.items">
-        <app-video-card [videoData]="videoCard"></app-video-card>
-    </ng-container>
+<app-filtering-criteria [searchResultsData]="data.items" 
+                        [isVisible]="toggleFilters" 
+                        (onInput)="filterSearchResults($event)">
+</app-filtering-criteria>
+<ng-container *ngIf="filteredData ? filteredData : data.items">
+    <div class="search-results">
+        <ng-container *ngFor="let videoCard of (filteredData ? filteredData : data.items)">
+            <app-video-card [videoData]="videoCard"></app-video-card>
+        </ng-container>
+    </div>
 </ng-container>

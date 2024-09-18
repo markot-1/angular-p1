@@ -10,5 +10,9 @@ import { SearchResultsComponent } from '../search-results/search-results.compone
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
+  toggleFilters: boolean = true;
 
+  toggleFilterComponent() {
+    this.toggleFilters = this.toggleFilters ? false : true;
+  }
 }

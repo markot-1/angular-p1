@@ -3,6 +3,6 @@
     <span [innerHTML]="'Sorting by:' | bold"></span>
     <span>date</span>
     <span>count of views</span>
-    <app-filter-input></app-filter-input>
+    <app-filter-input [value]="filterValue" (onChange)="filterInputData($event)"></app-filter-input>
   </ng-container>
 </div>
