@@ -18,7 +18,21 @@ export class FilteringCriteriaComponent {
   filterValue: string = '';
   filteredData: any;
 
-  filterInputData(event: string): any {
+  filterByDate() {
+    let filteringData = (this.filteredData ? this.filteredData : this.searchResultsData).slice();
+    let dataItems = filteringData.sort((a: any, b: any) => {
+      return Date.parse(b.snippet.publishedAt) - Date.parse(a.snippet.publishedAt);
+    });
+
+    if(this.filteredData && JSON.stringify(this.filteredData) === JSON.stringify(dataItems)) {
+      dataItems.reverse();
+    }
+
+    this.filteredData = dataItems;
+    this.onInput.emit(this.filteredData);
+  }
+
+  filterByInput(event: string): any {
     this.filterValue = event;
 
     let dataItems = this.searchResultsData.filter((item: any) => {

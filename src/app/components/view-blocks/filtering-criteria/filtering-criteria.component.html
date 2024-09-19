@@ -1,8 +1,8 @@
 <div class="wrapper">
   <ng-container *ngIf="isVisible">
     <span [innerHTML]="'Sorting by:' | bold"></span>
-    <span>date</span>
-    <span>count of views</span>
-    <app-filter-input [value]="filterValue" (onChange)="filterInputData($event)"></app-filter-input>
+    <span class="sort" (click)="filterByDate()">date</span>
+    <span class="sort">count of views</span>
+    <app-filter-input [value]="filterValue" (onChange)="filterByInput($event)"></app-filter-input>
   </ng-container>
 </div>

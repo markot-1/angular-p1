@@ -3,8 +3,16 @@
 .wrapper {
     @extend %wrapper;
     height: 60px;
+    column-gap: 5px;
 
     span {
         color: $black-color;
+        cursor: pointer;
+        padding: 3px 7px;
+        border-radius: 2px;
+
+        &:hover {
+            background: $grey-color;
+        }
     }
 }
