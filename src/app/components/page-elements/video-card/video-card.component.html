@@ -2,15 +2,15 @@
     <div class="video-preview" style="background-image: url('{{videoData.snippet.thumbnails.standard.url}}')"></div>
     <div class="video-stats">
         <div class="stats-wrapper">
-            <div class="viewCount"></div>
+            <div class="stats-count views"></div>
             <span>{{videoData.statistics.viewCount}}</span>
         </div>
-        <div>
-            <div class="likeCount"></div>
+        <div class="stats-wrapper">
+            <div class="stats-count likes"></div>
             <span>{{videoData.statistics.likeCount}}</span>
         </div>
-        <div>
-            <div class="commentCount"></div>
+        <div class="stats-wrapper">
+            <div class="stats-count comments"></div>
             <span>{{videoData.statistics.commentCount}}</span>
         </div>
     </div>

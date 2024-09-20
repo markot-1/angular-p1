@@ -16,20 +16,40 @@
         border-top-left-radius: 5px;
         background-color: pink;
     }
-    
+
     .video-stats {
         display: flex;
         justify-content: right;
-        column-gap: 10px;
+        column-gap: 15px;
         padding: 0 10px;
         margin: 15px 0;
-        
+
         .stats-wrapper {
             display: flex;
             column-gap: 5px;
+            align-items: center;
+
+            .stats-count {
+                width: 20px;
+                background: center;
+                background-repeat: no-repeat;
+                height: 13px;
+            }
+
+            .views {
+                background-image: url('../../../../assets/img/viewed.png');
+            }
+
+            .likes {
+                background-image: url('../../../../assets/img/liked.png');
+            }
+
+            .comments {
+                background-image: url('../../../../assets/img/Group\ 9.png');
+            }
         }
     }
-    
+
     .header {
         display: block;
         color: $black-color;
@@ -39,14 +59,14 @@
         padding: 0 10px;
         margin: 15px 0;
     }
-    
+
     .information-button {
         @extend %button;
         margin: 0 auto;
         width: 120px;
         height: 35px;
     }
-    
+
     .indicator {
         height: 5px;
         width: 100%;
