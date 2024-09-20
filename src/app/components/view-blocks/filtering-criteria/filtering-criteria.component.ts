@@ -18,13 +18,15 @@ export class FilteringCriteriaComponent {
   filterValue: string = '';
   filteredData: any;
 
-  filterByDate() {
+  filters(event: any) {
     let filteringData = (this.filteredData ? this.filteredData : this.searchResultsData).slice();
+    let dateSort = event.target.classList.contains('date') ? true : false;
+
     let dataItems = filteringData.sort((a: any, b: any) => {
-      return Date.parse(b.snippet.publishedAt) - Date.parse(a.snippet.publishedAt);
+        return dateSort ? Date.parse(b.snippet.publishedAt) - Date.parse(a.snippet.publishedAt) : Number(b.statistics.viewCount) - Number(a.statistics.viewCount);
     });
 
-    if(this.filteredData && JSON.stringify(this.filteredData) === JSON.stringify(dataItems)) {
+    if (this.filteredData && JSON.stringify(this.filteredData) === JSON.stringify(dataItems)) {
       dataItems.reverse();
     }
 
