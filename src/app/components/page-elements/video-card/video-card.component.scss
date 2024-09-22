@@ -60,11 +60,12 @@
         margin: 15px 0;
     }
 
-    .information-button {
-        @extend %button;
-        margin: 0 auto;
-        width: 120px;
-        height: 35px;
+    ::ng-deep app-button {
+        button {
+            margin: 0 auto;
+            width: 120px;
+            height: 35px;
+        }
     }
 
     .indicator {

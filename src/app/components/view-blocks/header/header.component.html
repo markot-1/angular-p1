@@ -1,10 +1,12 @@
 <div class="wrapper">
     <div class="logo"></div>
     <app-search-input></app-search-input>
-    <button>Search</button>
-    <div class="settings-button" (click)="toggleSettings()">
+    <app-button>
+        <span>Search</span>
+    </app-button>
+    <app-button class="settings-button" (click)="toggleSettings()">
         <img src="../../../../assets/img/button-settings.png">
-    </div>
+    </app-button>
 </div>
 <app-login-information></app-login-information>
 
