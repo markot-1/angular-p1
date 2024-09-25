@@ -11,8 +11,13 @@ import { SearchResultsComponent } from '../search-results/search-results.compone
 })
 export class MainComponent {
   toggleFilters: boolean = true;
+  searchValue: string = '';
 
   toggleFilterComponent() {
     this.toggleFilters = this.toggleFilters ? false : true;
+  }
+
+  search(event: any) {
+    this.searchValue = event;
   }
 }

@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div class="logo"></div>
-    <app-search-input></app-search-input>
-    <app-button>
+    <app-filter-input [placeholder]="'Enter your request'" [value]="searchValue" (onChange)="searchByInput($event)"></app-filter-input>
+    <app-button (click)="search(searchValue)">
         <span>Search</span>
     </app-button>
     <app-button class="settings-button" (click)="toggleSettings()">

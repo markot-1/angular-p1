@@ -15,6 +15,7 @@ export class SearchResultsComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   @Input() toggleFilters: boolean = true;
+  @Input() searchValue: string = '';
   data: any;
   filteredData: any;
 

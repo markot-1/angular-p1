@@ -9,6 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class FilterInputComponent {
   @Input() value: string = '';
+  @Input() placeholder: string = '';
   @Output() onChange: EventEmitter<any> = new EventEmitter<any>();
 
   OnInput(value: any) {
