@@ -1,2 +1,3 @@
 <app-header (onClick)="toggleFilterComponent()" (onSearch)="search($event)"></app-header>
 <app-search-results [searchValue]="searchValue" [toggleFilters]="toggleFilters"></app-search-results>
+<router-outlet></router-outlet>

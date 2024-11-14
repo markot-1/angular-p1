@@ -22,6 +22,12 @@ $light-blue-color: #2F80ED;
 
     &:hover {
         box-shadow: none;
-        cursor: pointer;  
+        cursor: pointer;
     }
+}
+
+%header {
+    color: $black-color;
+    font-size: 30px;
+    margin: 0;
 }

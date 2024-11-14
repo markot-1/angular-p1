@@ -15,7 +15,7 @@
         </div>
     </div>
     <h3 class="header">{{videoData.snippet.title}}</h3>
-    <app-button>
+    <app-button routerLink="video" routerLinkActive="active">
         <span>more</span>
     </app-button>
     <div [style.background-color]="videoData.snippet.publishedAt | changeBgColor" class="indicator"></div>

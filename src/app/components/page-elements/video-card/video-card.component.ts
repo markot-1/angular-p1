@@ -1,12 +1,12 @@
-import { NgFor, NgIf } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ChangeBgColorPipe } from '../../../pipes/change-bg-color.pipe';
 import { ButtonComponent } from "../button/button.component";
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-video-card',
   standalone: true,
-  imports: [NgIf, NgFor, ChangeBgColorPipe, ButtonComponent],
+  imports: [ChangeBgColorPipe, ButtonComponent, RouterLink, RouterLinkActive],
   templateUrl: './video-card.component.html',
   styleUrl: './video-card.component.scss'
 })
