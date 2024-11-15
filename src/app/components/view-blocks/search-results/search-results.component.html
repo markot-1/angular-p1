@@ -7,7 +7,7 @@
     <ng-container *ngIf="filteredData ? filteredData : data.items">
         <div class="search-results">
             <ng-container *ngFor="let videoCard of (filteredData ? filteredData : data.items)">
-                <app-video-card [videoData]="videoCard"></app-video-card>
+                <app-video-card (click)="navigateToVideoPage(videoCard.id)" [videoData]="videoCard"></app-video-card>
             </ng-container>
         </div>
     </ng-container>

@@ -6,7 +6,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-video-card',
   standalone: true,
-  imports: [ChangeBgColorPipe, ButtonComponent, RouterLink, RouterLinkActive],
+  imports: [ChangeBgColorPipe, ButtonComponent],
   templateUrl: './video-card.component.html',
   styleUrl: './video-card.component.scss'
 })
