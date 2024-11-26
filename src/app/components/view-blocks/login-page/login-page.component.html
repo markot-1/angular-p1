@@ -1,8 +1,22 @@
 <div class="page-wrapper">
-    <div class="login-wrapper">
-        <h1>Angular project</h1>
-        <a class="router-link" routerLink="../main" routerLinkActive="active"
-          >Start to explore</a>
-      </div>
-      <div class="background-wrapper"></div>
+  <div class="login-wrapper">
+    <h1>Angular project</h1>
+    <form class="login-form">
+      <legend>Войдите в свой аккаунт</legend>
+      <p>
+        <input class="login-input" type="text" name="user-name" id="name" placeholder="Введите имя пользователя"/>
+      </p>
+      <p>
+        <input class="login-input" type="email" name="user-email" id="email" placeholder="Введите e-mail" />
+      </p>
+      <p>
+        <input class="login-input" type="password" name="user-password" id="password" placeholder="Введите пароль"/>
+      </p>
+
+      <app-button routerLink="../main" routerLinkActive="active">
+        <span>Войти</span>
+      </app-button>
+    </form>
+  </div>
+  <div class="background-wrapper"></div>
 </div>

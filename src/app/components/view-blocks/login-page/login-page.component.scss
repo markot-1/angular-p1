@@ -5,24 +5,46 @@
     justify-content: space-between;
 
     .login-wrapper {
-        width: 320px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 200px 0;
-        margin: 0 auto;
+        padding: 125px 0;
+        background: $background-grey-color;
 
         h1 {
             @extend %header;
             padding: 40px 0;
         }
 
-        .router-link {
-            @extend %button;
-            padding: 10px;
-            width: 100%;
-            text-align: center;
-            text-decoration: none;
+        .login-form {
+
+            legend {
+                padding: 10px 0;
+                font-size: 20px;
+                color: $black-color;
+            }
+
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+            padding: 20px;
+            border-radius: 4px;
+
+            .login-input {
+                @extend %input;
+            }
+        }
+
+        ::ng-deep app-button {
+            button {
+                margin: 10px auto 0;
+                width: 120px;
+                height: 35px;
+            }
         }
     }
 

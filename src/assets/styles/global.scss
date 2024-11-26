@@ -1,7 +1,9 @@
 $background-grey-color: #faf6f6;
-$grey-color: #efefef;
+$light-grey-color: #efefef;
+$grey-color: #818181;
 $black-color: #424242;
 $light-blue-color: #2F80ED;
+$background-blue-color: #c9e0ff;
 
 %wrapper {
     width: 100%;
@@ -30,4 +32,19 @@ $light-blue-color: #2F80ED;
     color: $black-color;
     font-size: 30px;
     margin: 0;
+}
+
+%input {
+    width: 250px;
+    height: 40px;
+    outline: none;
+    border: 1px solid $grey-color;
+    background: transparent;
+    padding: 0 10px;
+    color: $black-color;
+    border-radius: 3px;
+
+    &:hover {
+        border-color: $black-color;
+    }
 }
