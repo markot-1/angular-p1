@@ -1,0 +1,41 @@
+@import '../../../../assets/styles/global.scss';
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 200px 0;
+    width: 400px;
+
+    .header-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+
+        h2 {
+            @extend %header;
+            font-size: 85px;
+        }
+
+        .icon-crying {
+            background-image: url('../../../../assets/img/icons-crying.png');
+            width: 93px;
+            background-repeat: no-repeat;
+            height: 93px;
+        }
+    }
+
+    p {
+        margin: 20px auto;
+        font-size: 22px;
+        color: $black-color;
+    }
+
+    button {
+        @extend %button;
+        width: fit-content;
+        padding: 10px 15px;
+    }
+}
