@@ -3,6 +3,7 @@ $light-grey-color: #efefef;
 $grey-color: #818181;
 $black-color: #424242;
 $light-blue-color: #2F80ED;
+$light-blue-color-disabled: #6ea2e8;
 $background-blue-color: #c9e0ff;
 
 %wrapper {
@@ -26,11 +27,18 @@ $background-blue-color: #c9e0ff;
         box-shadow: none;
         cursor: pointer;
     }
+
+    &:disabled {
+        box-shadow: none;
+        background: #6ea2e8;
+        color: $background-grey-color;
+        cursor: auto;
+    }
 }
 
 %header {
     color: $black-color;
-    font-size: 30px;
+    font-size: 40px;
     margin: 0;
 }
 

@@ -1,20 +1,20 @@
 <div class="page-wrapper">
   <div class="login-wrapper">
     <h1>Angular project</h1>
-    <form class="login-form">
-      <legend>Войдите в свой аккаунт</legend>
+    <form class="login-form" [formGroup]="form">
+      <legend>Login to your account</legend>
       <p>
-        <input class="login-input" type="text" name="user-name" id="name" placeholder="Введите имя пользователя"/>
+        <input class="login-input" formControlName="name" type="text" name="user-name" id="name" placeholder="Enter your login"/>
       </p>
       <p>
-        <input class="login-input" type="email" name="user-email" id="email" placeholder="Введите e-mail" />
+        <input class="login-input" formControlName="email" type="email" name="user-email" id="email" placeholder="Enter your e-mail" />
       </p>
       <p>
-        <input class="login-input" type="password" name="user-password" id="password" placeholder="Введите пароль"/>
+        <input class="login-input" formControlName="password" type="password" name="user-password" id="password" placeholder="Enter your password"/>
       </p>
 
-      <app-button routerLink="../main" routerLinkActive="active">
-        <span>Войти</span>
+      <app-button [disabled]="this.form.status !== 'VALID'" (click)="login()" routerLink="../main" routerLinkActive="active">
+        <span>Submit</span>
       </app-button>
     </form>
   </div>

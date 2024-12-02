@@ -21,12 +21,10 @@ export class VideoPageComponent {
   ) {}
 
   ngOnInit(): void {
-    this.videoDataService.getData().toPromise().then((data) => {
+    this.videoDataService.getData().subscribe((data) => {
       this.data = data;
       this.initializeWithData(this.data);
-    }).catch((error) => {
-      console.error('Error fetching data:', error);
-    });
+    })
   }
 
   initializeWithData(data: any) {
