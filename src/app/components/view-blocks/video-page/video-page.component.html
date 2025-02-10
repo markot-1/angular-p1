@@ -1,4 +1,6 @@
+<app-header></app-header>
 <ng-container *ngIf="videoData">
+  <div class="video-cover" style="background-image: url('{{videoData.snippet?.thumbnails.standard.url}}')"></div>
   <span>{{ videoData.snippet?.title }}</span>
   <span>{{ videoData.id }}</span>
 </ng-container>

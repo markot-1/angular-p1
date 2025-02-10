@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { VideoDataService } from '../../../services/video-data.service';
 import { NgIf } from '@angular/common';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-video-page',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, HeaderComponent],
   templateUrl: './video-page.component.html',
   styleUrl: './video-page.component.scss',
 })
