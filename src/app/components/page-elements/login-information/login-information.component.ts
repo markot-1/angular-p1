@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { TooltipModule } from 'primeng/tooltip';
 
 @Component({
   selector: 'app-login-information',
   standalone: true,
-  imports: [],
+  imports: [TooltipModule],
   templateUrl: './login-information.component.html',
   styleUrl: './login-information.component.scss'
 })

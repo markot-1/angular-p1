@@ -1,2 +1,2 @@
 <span>{{loginData?.name || 'your name'}}</span>
-<img (click)="logout()" src="../../../../assets/img/user-1.png">
+<img [pTooltip]="'Click to logout'" tooltipPosition="bottom"  (click)="logout()" src="../../../../assets/img/user-1.png">
