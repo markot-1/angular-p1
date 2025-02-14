@@ -1,2 +1,13 @@
 <span>{{loginData?.name || 'your name'}}</span>
-<img [pTooltip]="'Click to logout'" tooltipPosition="bottom"  (click)="logout()" src="../../../../assets/img/user-1.png">
+<img src="../../../../assets/img/user-1.png" (click)="sidebarVisible = !sidebarVisible">
+
+<p-sidebar styleClass="login-sidebar" [(visible)]="sidebarVisible" position="right">
+    <ng-container *ngIf="loginData">
+        <h3 class="header">User information</h3>
+        <div class="block">
+            <span>User: {{ loginData.name }}</span>
+            <span>Email: {{ loginData.email }}</span>
+        </div>
+    </ng-container>
+    <button [pTooltip]="'Click to logout'" tooltipPosition="bottom" (click)="logout()" >Logout</button>
+</p-sidebar>

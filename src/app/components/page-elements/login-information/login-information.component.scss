@@ -6,11 +6,40 @@
     column-gap: 10px;
 }
 
+span {
+    color: $black-color;
+}
+
 img {
     width: 40px;
     cursor: pointer;
 }
 
-span {
-    color: $black-color;
+::ng-deep .login-sidebar {
+    .p-sidebar-content {
+        display: flex;
+        flex-direction: column;
+    
+        .header {
+            display: block;
+            color: $black-color;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 0 10px;
+            margin: 15px 0;
+        }
+    
+        .block {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        button {
+            @extend %button;
+            margin: 10px;
+            padding: 5px;
+            width: 100px;
+        }
+    }
 }
